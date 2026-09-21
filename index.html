@@ -73,7 +73,7 @@
     }
 
     /* fieldset + legend es la forma NATIVA de agrupar radios. Sin una sola
-       linea de ARIA, el navegador ya anuncia "Operación, grupo, 1 de 5".
+       linea de ARIA, el navegador ya anuncia "Operación, grupo, 1 de 6".
        Le sacamos los estilos por defecto que son horribles. */
     fieldset { border: none; padding: 0; margin: 0; }
 
@@ -346,7 +346,7 @@
           </div>
         </div>
 
-        <!-- Radios y no botones sueltos: la operación es UNA sola entre cinco
+        <!-- Radios y no botones sueltos: la operación es UNA sola entre seis
              opciones mutuamente excluyentes. Ese es exactamente el input que
              inventaron los radio buttons. Además el navegador garantiza solo
              que nunca haya dos seleccionadas — no escribís código para eso.
@@ -367,6 +367,9 @@
 
             <input type="radio" id="op-div" name="operacion" value="division">
             <label for="op-div"><span class="simbolo">÷</span>División</label>
+
+            <input type="radio" id="op-mod" name="operacion" value="modulo">
+            <label for="op-mod"><span class="simbolo">%</span>Módulo</label>
 
             <input type="radio" id="op-pot" name="operacion" value="potencia">
             <label for="op-pot"><span class="simbolo">**</span>Potencia</label>
