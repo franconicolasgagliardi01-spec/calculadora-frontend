@@ -428,7 +428,7 @@
             </div>
           </div>
 
-          <!-- Radios y no botones sueltos: la operación es UNA sola entre nueve
+          <!-- Radios y no botones sueltos: la operación es UNA sola entre diez
              opciones mutuamente excluyentes. Ese es exactamente el input que
              inventaron los radio buttons. Además el navegador garantiza solo
              que nunca haya dos seleccionadas — no escribís código para eso.
@@ -505,6 +505,14 @@
               <label for="op-log"
                 ><span class="simbolo">log</span>Logaritmo</label
               >
+
+              <input
+                type="radio"
+                id="op-raiz"
+                name="operacion"
+                value="raiz"
+              />
+              <label for="op-raiz"><span class="simbolo">√</span>Raíz</label>
 
               <input
                 type="radio"
@@ -689,6 +697,9 @@
         if (operacionSeleccionada === "logaritmo") {
           labelA.textContent = "Base";
           labelB.textContent = "Argumento";
+        } else if (operacionSeleccionada === "raiz") {
+          labelA.textContent = "Radicando";
+          labelB.textContent = "Índice";
         } else {
           labelA.textContent = LABEL_A_ORIGINAL;
           labelB.textContent = LABEL_B_ORIGINAL;
